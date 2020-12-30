@@ -1,9 +1,3 @@
-# User Defined
-Archive/
-Source/
-Reports/
-*.xl*
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -142,3 +136,20 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+
+
+# User Defined
+Archive/
+Source/
+Reports/
+*.xl*
+.backup/*
+.history/*
+Access SQL/*
+*.png
+*.jpg
+*.json
+EasyOCR-master/*
+CRNN_Tensorflow-master/*
+Misc/*

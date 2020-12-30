@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>388</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>388</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>20</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>356</width>
+      <height>359</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="title_label">
+         <property name="font">
+          <font>
+           <family>Calibri</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>WBS Mapping Update Tool</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::RichText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout" columnstretch="0,1">
+       <item row="2" column="0">
+        <widget class="QLabel" name="wbs_label">
+         <property name="text">
+          <string>WBS Element</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="prj_def_label">
+         <property name="text">
+          <string>Project Def</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="prj_def_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="prj_desc_label">
+         <property name="text">
+          <string>Project Description</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="prj_desc_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="network_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="nwa_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="network_label">
+         <property name="text">
+          <string>Network</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="nwa_label">
+         <property name="text">
+          <string>NWA #</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="wbs_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>256</width>
+         <height>3</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="update_pushButton">
+         <property name="toolTip">
+          <string>Refresh Drop Down Lists With Most Recently Entered Value</string>
+         </property>
+         <property name="text">
+          <string>Refresh Drop Down Fields</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>256</width>
+         <height>3</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="alt_gridLayout" columnstretch="0,1">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="horizontalSpacing">
+        <number>25</number>
+       </property>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="alt_sp3_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="alt_sp3_label">
+         <property name="text">
+          <string>Alt Sub Prog 3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="phase_comboBox"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="phase_label">
+         <property name="text">
+          <string>Phase</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="alt_sp1_label">
+         <property name="text">
+          <string>Alt Sub Prog 1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="alt_sp1_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="alt_sp2_label">
+         <property name="text">
+          <string>Alt Sub Prog 2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="alt_sp2_comboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>256</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="update_cancel_horizontalLayout" stretch="1,0,1,0">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinimumSize</enum>
+       </property>
+       <item>
+        <widget class="QPushButton" name="cancel_pushButton">
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Update Table</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="show_options_checkBox">
+         <property name="text">
+          <string>Show Optons</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>10</y>
+      <width>371</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="ocr_optional_verticalLayout">
+     <item>
+      <widget class="QLabel" name="title_label_2">
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Additional Options</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="ocr_results_label">
+       <property name="text">
+        <string>OCR Read SAP Results</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="ocr_tableView"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,1">
+       <item>
+        <widget class="QPushButton" name="ocr_read_pushButton">
+         <property name="text">
+          <string>OCR Read SAP</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ocr_fill_pushButton">
+         <property name="text">
+          <string>Fill Using OCR Results</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>140</y>
+      <width>353</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="ocr_cont_horizontalLayout">
+     <item>
+      <widget class="QCheckBox" name="ocr_cont_checkBox">
+       <property name="text">
+        <string>Read Screen Continuously</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Read Screen Interval (Seconds)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="ocr_freq_spinBox">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>388</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionShow_Optons">
+   <property name="text">
+    <string>Show Optons</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>prj_def_comboBox</tabstop>
+  <tabstop>prj_desc_comboBox</tabstop>
+  <tabstop>wbs_comboBox</tabstop>
+  <tabstop>network_comboBox</tabstop>
+  <tabstop>nwa_comboBox</tabstop>
+  <tabstop>alt_sp1_comboBox</tabstop>
+  <tabstop>alt_sp2_comboBox</tabstop>
+  <tabstop>alt_sp3_comboBox</tabstop>
+  <tabstop>phase_comboBox</tabstop>
+  <tabstop>update_pushButton</tabstop>
+  <tabstop>cancel_pushButton</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>ocr_freq_spinBox</tabstop>
+  <tabstop>ocr_cont_checkBox</tabstop>
+  <tabstop>ocr_read_pushButton</tabstop>
+  <tabstop>ocr_tableView</tabstop>
+  <tabstop>ocr_fill_pushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>alt_sp3_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>alt_sp3_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>298</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>update_pushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update_button_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>prj_def_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>prj_def_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>alt_sp1_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>alt_sp1_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>311</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nwa_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>nwa_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>wbs_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>wbs_element_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>alt_sp2_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>alt_sp2_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>network_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>network_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>305</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>prj_desc_comboBox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>prj_desc_updated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>289</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocr_cont_checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>continuous_ocr_toggled()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1057</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocr_read_pushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ocr_read_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocr_freq_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ocr_read_freq_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1351</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancel_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>57</x>
+     <y>376</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update_table_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>381</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShow_Optons</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show_options()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>193</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocr_fill_pushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ocr_fill_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>815</x>
+     <y>384</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>353</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>show_options_checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show_options()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>383</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>prj_def_updated()</slot>
+  <slot>wbs_element_updated()</slot>
+  <slot>network_updated()</slot>
+  <slot>nwa_updated()</slot>
+  <slot>alt_sp1_updated()</slot>
+  <slot>alt_sp2_updated()</slot>
+  <slot>alt_sp3_updated()</slot>
+  <slot>ocr_read_pressed()</slot>
+  <slot>update_button_pressed()</slot>
+  <slot>prj_desc_updated()</slot>
+  <slot>continuous_ocr_toggled()</slot>
+  <slot>ocr_read_freq_changed()</slot>
+  <slot>update_table_pressed()</slot>
+  <slot>show_options()</slot>
+  <slot>ocr_fill_pressed()</slot>
+ </slots>
+</ui>
